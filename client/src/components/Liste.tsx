@@ -32,7 +32,7 @@ function Liste() {
     <>
       <div>
         {list.map((Alphabet) => (
-          <button type="button" key="Alphabet" onClick="">
+          <button type="button" key="Alphabet">
             {Alphabet}
           </button>
         ))}
