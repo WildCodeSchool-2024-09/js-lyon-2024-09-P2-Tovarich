@@ -1,8 +1,16 @@
 import "./App.css";
-import Title from "./components/Title";
 
+import Liste from "./components/Liste";
+import Title from "./components/Title";
 function App() {
-  return <Title />;
+  return (
+    <>
+      <div className="background">
+        <Title />
+        <Liste />
+      </div>
+    </>
+  );
 }
 
 export default App;
