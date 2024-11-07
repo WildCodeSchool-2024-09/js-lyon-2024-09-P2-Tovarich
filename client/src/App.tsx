@@ -16,8 +16,8 @@ function App() {
       <div className="background">
         <Title />
         <Liste />
-        <Cocktail cocktailData={cocktailSample} />
         <DropdownFilter />
+        <Cocktail cocktailData={cocktailSample} />
       </div>
     </>
   );
