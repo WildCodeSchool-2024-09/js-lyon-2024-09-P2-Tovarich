@@ -15,4 +15,10 @@
   background-size: cover;
   background-position: center;
   opacity: 0.75;
+  display: flex;
+}
+
+button {
+  height: 2%;
+  font-size: 5vh;
 }
