@@ -30,13 +30,11 @@ const list = [
 function Liste() {
   return (
     <>
-      <div>
-        {list.map((Alphabet) => (
-          <button type="button" key={Alphabet}>
-            {Alphabet}
-          </button>
-        ))}
-      </div>
+      {list.map((Alphabet) => (
+        <button type="button" key={Alphabet}>
+          {Alphabet}
+        </button>
+      ))}
     </>
   );
 }
