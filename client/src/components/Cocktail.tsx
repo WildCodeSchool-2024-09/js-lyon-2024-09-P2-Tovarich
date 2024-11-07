@@ -10,15 +10,15 @@ interface cocktailListe {
 function Cocktail({ cocktailData }: cocktailListe) {
   return (
     <>
-      {cocktailData.map((cocktailDetail) => (
-        <div className="infoCocktail" key={cocktailDetail.name}>
-          <article>
-            {cocktailDetail.image}
-            <figcaption>{cocktailDetail.name}</figcaption>
+      <div className="totalCocktail">
+        {cocktailData.map((cocktailDetail) => (
+          <article className="infoCocktail" key={cocktailDetail.name}>
+            <img src={cocktailDetail.image} alt="" />
+            <h2>{cocktailDetail.name}</h2>
             <button type="button">More Information</button>
           </article>
-        </div>
-      ))}
+        ))}
+      </div>
     </>
   );
 }

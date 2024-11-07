@@ -1,11 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap");
+
 :root {
   --textColor: #ff6fd8;
+  --colorBackground: #d9d9d9;
+  --fontForText: "Tilt Neon", sans-serif;
 }
 
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+}
+
+body,
+html,
+#root {
   height: 100%;
 }
 
@@ -14,10 +22,59 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  opacity: 0.75;
+  background-color: rgba(255, 255, 255, 0.35);
+  background-blend-mode: overlay;
+  min-height: 100%;
 }
 
 button {
   height: 5vh;
   font-size: 5vh;
+}
+
+.totalCocktail {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+}
+
+.infoCocktail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+  margin: 55px;
+  padding: 35px;
+  padding-bottom: clamp(35px, 10vh, 200px);
+  background-color: var(--colorBackground);
+  border-radius: 15px;
+  max-height: 400px;
+  max-width: 400px;
+}
+
+.infoCocktail img {
+  max-height: 100%;
+  max-width: 100%;
+}
+
+.infoCocktail h2 {
+  font-family: var(--fontForText);
+  font-size: 5vh;
+  text-align: center;
+}
+
+.infoCocktail button {
+  min-height: 30px;
+  margin: 5px;
+  font-family: var(--fontForText);
+  font-size: small;
+  justify-content: center;
+  width: 75%;
+  border-radius: 5px;
+  border: 6px rgb(243, 166, 191);
+  background-color: rgb(243, 166, 191);
+}
+
+.infoCocktail button:hover {
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.23);
 }

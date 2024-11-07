@@ -4,8 +4,8 @@ import "./App.css";
 
 const cocktailSample = [
   {
-    name: "Mojito sans alcool",
-    image: "clientsrcassetsimagesMojito-sans-alcool.jpg",
+    name: "Virgin Mojito",
+    image: "./src/assets/images/Mojito-sans-alcool.jpg",
   },
 ];
 
