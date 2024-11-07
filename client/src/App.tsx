@@ -1,8 +1,15 @@
-// import React, { useState } from "react";
 import "./App.css";
+import Cocktail from "./components/Cocktail";
 import DropdownFilter from "./components/DropdownFilter";
 import Liste from "./components/Liste";
 import Title from "./components/Title";
+
+const cocktailSample = [
+  {
+    name: "Virgin Mojito",
+    image: "./src/assets/images/Mojito-sans-alcool.jpg",
+  },
+];
 function App() {
   return (
     <>
@@ -10,6 +17,7 @@ function App() {
         <Title />
         <Liste />
         <DropdownFilter />
+        <Cocktail cocktailData={cocktailSample} />
       </div>
     </>
   );
