@@ -31,8 +31,8 @@ function Liste() {
   return (
     <>
       <div>
-        {list.map((Alphabet, index) => (
-          <button type="button" key={index}>
+        {list.map((Alphabet) => (
+          <button type="button" key={Alphabet}>
             {Alphabet}
           </button>
         ))}
