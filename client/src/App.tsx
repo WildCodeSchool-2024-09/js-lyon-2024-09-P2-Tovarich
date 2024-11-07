@@ -1,9 +1,12 @@
 import Liste from "./components/Liste";
+import "./App.css";
 
 function App() {
   return (
     <>
-      <Liste />
+      <div className="background">
+        <Liste />
+      </div>
     </>
   );
 }
