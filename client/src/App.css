@@ -1,145 +1,102 @@
+@import url("https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap");
+
+:root {
+  --textColor: #ff6fd8;
+  --colorBackground: #d9d9d9;
+  --fontForText: "Tilt Neon", sans-serif;
+}
+
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
-body {
-  font-family: "Lato", sans-serif;
-  font-size: 16px;
-  line-height: 1.7;
-  color: #eee;
-  margin: 0;
-}
-
+body,
+html,
 #root {
-  height: 100vh;
-  background-image: url("./assets/images/background.webp");
-  background-size: cover;
-  background-position: top;
-  display: grid;
-  grid-template-columns: auto 1fr auto;
-  grid-template-rows: 1fr;
-  align-content: start;
-  padding: 1rem;
+  height: 100%;
 }
 
-header {
-  grid-column: 1 / 2;
-  grid-row: 1;
-}
-
-.logo {
-  font-size: larger;
-}
-
-.navbar {
-  grid-column: -2 / -1;
-  grid-row: 1;
-}
-
-.navbar ul {
+h1 {
+  font-family: "Lato", sans-serif;
+  font-size: 20px;
+  line-height: 1.7;
+  color: #ff6fd8;
+  /* margin: 0 auto; */
+  /* align-items: center; */ /* >> vertical */
   display: flex;
-  justify-content: end;
-  gap: 1rem;
-  list-style: none;
-}
-
-.navbar a {
-  text-decoration: none;
-  color: #eee;
-  display: flex;
-  gap: 0.5rem;
-  align-items: center;
-}
-
-.navbar a:hover {
-  scale: 110%;
-}
-
-.text-box {
-  grid-column: 1 / -1;
-  grid-row: 1;
-  align-self: center;
-  text-align: center;
-}
-
-.block-primary {
-  text-transform: uppercase;
-  margin-bottom: 2rem;
-}
-
-.block-primary-main {
-  font-size: 3em;
-  letter-spacing: 5px;
-  animation: blink 12s infinite;
-}
-
-.block-primary-sub {
-  display: block;
-  font-weight: bold;
-  letter-spacing: 7px;
-}
-
-.btn:link,
-.btn:visited {
-  text-transform: uppercase;
-  text-decoration: none;
-  padding: 0.5rem 1rem;
-  display: inline-block;
-  border-radius: 100px;
-  transition: all 0.2s;
-  position: relative;
-}
-
-.btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-}
-
-.btn:active {
-  transform: translateY(-1px);
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-}
-
-.btn-white {
-  background-color: #fff;
-  color: #777;
+  justify-content: center;
 }
 
 footer {
-  grid-column: -2 / -1;
-  grid-row: 1;
-  align-self: end;
-  text-align: right;
+  font-family: "Lato", sans-serif;
+  font-size: 20px;
+  line-height: 1.7;
+  color: #ff6fd8;
+  /* margin: 0 auto; */
+  /* align-items: center; */ /* >> vertical */
+  display: flex;
+  justify-content: center;
 }
 
-.wcs {
-  text-decoration: none;
-  color: #ff1493ad;
+.background {
+  background-image: url(assets/fondSpatiale.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-color: rgba(255, 255, 255, 0.35);
+  background-blend-mode: overlay;
+  min-height: 100%;
 }
 
-.wcs:hover {
-  text-decoration: underline;
+button {
+  height: 5vh;
+  font-size: 5vh;
 }
 
-@keyframes blink {
-  20%,
-  24%,
-  55% {
-    color: #111;
-    text-shadow: none;
-  }
-  0%,
-  19%,
-  21%,
-  23%,
-  25%,
-  54%,
-  56%,
-  100% {
-    text-shadow: 0 0 5px #ff1493ad, 0 0 15px #eee, 0 0 20px #ff1493ad, 0 0 40px
-      #a00ac9, 0 0 60px #ff0000, 0 0 10px #970dc5, 0 0 98px #ff0000;
-    color: #fff;
-  }
+.totalCocktail {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+}
+
+.infoCocktail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+  margin: 55px;
+  padding: 35px;
+  padding-bottom: clamp(35px, 10vh, 200px);
+  background-color: var(--colorBackground);
+  border-radius: 15px;
+  max-height: 400px;
+  max-width: 400px;
+}
+
+.infoCocktail img {
+  max-height: 100%;
+  max-width: 100%;
+}
+
+.infoCocktail h2 {
+  font-family: var(--fontForText);
+  font-size: 5vh;
+  text-align: center;
+}
+
+.infoCocktail button {
+  min-height: 30px;
+  margin: 5px;
+  font-family: var(--fontForText);
+  font-size: small;
+  justify-content: center;
+  width: 75%;
+  border-radius: 5px;
+  border: 6px rgb(243, 166, 191);
+  background-color: rgb(243, 166, 191);
+}
+
+.infoCocktail button:hover {
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.23);
 }
