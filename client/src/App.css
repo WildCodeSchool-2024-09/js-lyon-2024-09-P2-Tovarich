@@ -15,6 +15,12 @@ body,
 html,
 #root {
   height: 100%;
+  max-width: 100%;
+}
+
+.background {
+  display: flex;
+  flex-direction: column;
 }
 
 footer {
@@ -46,7 +52,10 @@ button {
 .totalCocktail {
   display: grid;
   grid-template-columns: 1fr;
-  justify-items: center;
+  justify-content: center;
+  max-width: 80%;
+  gap: 15px;
+  justify-self: center;
 }
 
 .infoCocktail {
@@ -54,13 +63,10 @@ button {
   flex-direction: column;
   align-items: center;
   justify-items: center;
-  margin: 55px;
   padding: 35px;
-  padding-bottom: clamp(35px, 10vh, 200px);
+  margin-top: 10px;
   background-color: var(--colorBackground);
   border-radius: 15px;
-  max-height: 400px;
-  max-width: 400px;
 }
 
 .infoCocktail img {
@@ -88,4 +94,19 @@ button {
 
 .infoCocktail button:hover {
   box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.23);
+}
+
+@media screen and (min-width: 768px) {
+  .totalCocktail {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 10px;
+    max-width: 90%;
+    justify-content: center;
+  }
+  .infoCocktail {
+    padding: 15px;
+  }
+  .infoCocktail h2 {
+    font-size: 3vh;
+  }
 }
