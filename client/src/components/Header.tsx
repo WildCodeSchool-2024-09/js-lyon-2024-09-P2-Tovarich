@@ -5,9 +5,6 @@ function Header() {
     <>
       <header>
         <h1>Smooth Operator</h1>
-        {/* <button type="button" onClick={() => setCurrentLocation("/")}>
-          Acceuil
-        </button> */}
         <Link to="/">
           <button type="button">Home</button>
         </Link>
