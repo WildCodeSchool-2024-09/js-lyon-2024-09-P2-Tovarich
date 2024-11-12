@@ -1,0 +1,11 @@
+@font-face {
+    font-family: 'Nexa';
+    src: url('Nexa-Light-Italic.eot');
+    src: url('Nexa-Light-Italic.eot?#iefix') format('embedded-opentype'),
+        url('Nexa-Light-Italic.woff2') format('woff2'),
+        url('Nexa-Light-Italic.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+

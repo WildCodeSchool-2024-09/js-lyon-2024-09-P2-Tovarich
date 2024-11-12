@@ -1,0 +1,23 @@
+@font-face {
+  font-family: "Harlow Solid";
+  src: url("HarlowSolid.eot");
+  src: url("HarlowSolid.eot?#iefix") format("embedded-opentype"),
+    url("HarlowSolid.woff2") format("woff2"),
+    url("HarlowSolid.woff") format("woff");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+h1 {
+  font-family: "Harlow Solid";
+  color: #c984ff;
+  font-size: 30px;
+  line-height: 1.7;
+}
