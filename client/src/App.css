@@ -28,17 +28,6 @@ h1 {
   justify-content: center;
 }
 
-footer {
-  font-family: "Lato", sans-serif;
-  font-size: 20px;
-  line-height: 1.7;
-  color: #ff6fd8;
-  /* margin: 0 auto; */
-  /* align-items: center; */ /* >> vertical */
-  display: flex;
-  justify-content: center;
-}
-
 .background {
   background-image: url(assets/fondSpatiale.jpg);
   background-repeat: no-repeat;
