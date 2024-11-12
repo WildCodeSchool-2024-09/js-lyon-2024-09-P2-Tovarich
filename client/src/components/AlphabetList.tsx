@@ -27,7 +27,7 @@ const list = [
   "Z",
 ];
 
-function Liste() {
+function AlphabetList() {
   return (
     <>
       {list.map((Alphabet) => (
@@ -39,4 +39,4 @@ function Liste() {
   );
 }
 
-export default Liste;
+export default AlphabetList;
