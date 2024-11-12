@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 interface cocktailPros {
   idDrink: string;
   strDrink: string;
@@ -19,7 +21,9 @@ function Cocktail({ cocktailData }: CocktailListProps) {
               alt={cocktailDetail.strDrink}
             />
             <h2>{cocktailDetail.strDrink}</h2>
-            <button type="button">More Information</button>
+            <Link to="/recipe">
+              <button type="button">More Information</button>
+            </Link>
           </article>
         ))}
       </div>
