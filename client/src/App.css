@@ -54,6 +54,7 @@ button {
   justify-items: center;
   padding: 35px;
   margin-top: 10px;
+  margin-bottom: 10px;
   background-color: var(--colorBackground);
   border-radius: 15px;
 }

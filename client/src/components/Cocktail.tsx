@@ -1,10 +1,11 @@
-interface cocktailInfo {
-  image: string;
-  name: string;
+interface cocktailPros {
+  idDrink: string;
+  strDrink: string;
+  strDrinkThumb: string;
 }
 
 interface CocktailListProps {
-  cocktailData: cocktailInfo[];
+  cocktailData: cocktailPros[];
 }
 
 function Cocktail({ cocktailData }: CocktailListProps) {
@@ -12,9 +13,12 @@ function Cocktail({ cocktailData }: CocktailListProps) {
     <>
       <div className="totalCocktail">
         {cocktailData.map((cocktailDetail) => (
-          <article className="infoCocktail" key={cocktailDetail.name}>
-            <img src={cocktailDetail.image} alt={cocktailDetail.name} />
-            <h2>{cocktailDetail.name}</h2>
+          <article className="infoCocktail" key={cocktailDetail.idDrink}>
+            <img
+              src={cocktailDetail.strDrinkThumb}
+              alt={cocktailDetail.strDrink}
+            />
+            <h2>{cocktailDetail.strDrink}</h2>
             <button type="button">More Information</button>
           </article>
         ))}
