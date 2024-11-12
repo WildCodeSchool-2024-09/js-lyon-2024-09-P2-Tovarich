@@ -27,19 +27,17 @@ const cocktailSample = [
 function App() {
   return (
     <>
-      <body>
-        <section className="background">
-          <Header />
-          <main>
-            <nav>
-              <AlphabetList />
-              <DropdownFilter />
-            </nav>
-            <Cocktail cocktailData={cocktailSample} />
-            <Footer />
-          </main>
-        </section>
-      </body>
+      <section className="background">
+        <Header />
+        <main>
+          <nav>
+            <AlphabetList />
+            <DropdownFilter />
+          </nav>
+          <Cocktail cocktailData={cocktailSample} />
+          <Footer />
+        </main>
+      </section>
     </>
   );
 }
