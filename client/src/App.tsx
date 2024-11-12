@@ -1,8 +1,8 @@
 import "./App.css";
+import AlphabetList from "./components/AlphabetList";
 import Cocktail from "./components/Cocktail";
 import DropdownFilter from "./components/DropdownFilter";
 import Footer from "./components/Footer";
-import Liste from "./components/Liste";
 import Title from "./components/Title";
 
 const cocktailSample = [
@@ -16,7 +16,7 @@ function App() {
     <>
       <div className="background">
         <Title />
-        <Liste />
+        <AlphabetList />
         <DropdownFilter />
         <Cocktail cocktailData={cocktailSample} />
         <Footer />
