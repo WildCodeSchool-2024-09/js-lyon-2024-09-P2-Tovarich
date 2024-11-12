@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 interface cocktailInfo {
   image: string;
   name: string;
@@ -15,7 +17,12 @@ function Cocktail({ cocktailData }: CocktailListProps) {
           <article className="infoCocktail" key={cocktailDetail.name}>
             <img src={cocktailDetail.image} alt={cocktailDetail.name} />
             <h2>{cocktailDetail.name}</h2>
-            <button type="button">More Information</button>
+            {/* <button type="button" onClick={() => setCurrentLocation("/Recipe")}>
+              More Information
+            </button> */}
+            <Link to="/recipe">
+              <button type="button">More Information</button>
+            </Link>
           </article>
         ))}
       </div>
