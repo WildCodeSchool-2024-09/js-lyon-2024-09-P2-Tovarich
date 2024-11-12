@@ -1,8 +1,6 @@
-// import { useState } from "react";
 import "./dropdownStyle.css";
 
 function DropdownFilter() {
-  // const [xxx, setxxx] = useState ([]);
   return (
     <label>
       <select>

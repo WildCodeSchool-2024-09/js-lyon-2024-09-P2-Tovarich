@@ -3,17 +3,17 @@ interface cocktailInfo {
   name: string;
 }
 
-interface cocktailListe {
+interface CocktailListProps {
   cocktailData: cocktailInfo[];
 }
 
-function Cocktail({ cocktailData }: cocktailListe) {
+function Cocktail({ cocktailData }: CocktailListProps) {
   return (
     <>
       <div className="totalCocktail">
         {cocktailData.map((cocktailDetail) => (
           <article className="infoCocktail" key={cocktailDetail.name}>
-            <img src={cocktailDetail.image} alt="" />
+            <img src={cocktailDetail.image} alt={cocktailDetail.name} />
             <h2>{cocktailDetail.name}</h2>
             <button type="button">More Information</button>
           </article>
