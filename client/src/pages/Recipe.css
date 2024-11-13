@@ -1,0 +1,48 @@
+:root {
+  --textColor: #908dff;
+  --titleColor: #c984ff;
+  --colorRectangle: #282748;
+  --colorBackground: #1e1d38;
+  --fontForText: "Tilt Neon", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body,
+html,
+#root {
+  height: 100%;
+  max-width: 100%;
+  background-color: var(--colorBackground);
+}
+
+h2,
+h3,
+ul {
+  color: var(--titleColor);
+}
+
+ul {
+  background-color: var(--colorRectangle);
+  margin-bottom: 15px;
+  border-radius: 10px;
+  padding: 5px;
+}
+
+li,
+p {
+  color: var(--textColor);
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    max-width: 100%;
+  }
+  #root {
+    width: 80%;
+    justify-self: center;
+  }
+}
