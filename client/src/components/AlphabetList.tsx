@@ -29,13 +29,13 @@ const list = [
 
 function AlphabetList() {
   return (
-    <>
+    <section className="alphabetBtn">
       {list.map((Alphabet) => (
         <button type="button" key={Alphabet}>
           {Alphabet}
         </button>
       ))}
-    </>
+    </section>
   );
 }
 
