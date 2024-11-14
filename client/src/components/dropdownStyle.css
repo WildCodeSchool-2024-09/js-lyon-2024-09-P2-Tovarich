@@ -1,12 +1,15 @@
 select {
-  background-color: #f9f9f9;
-  padding: 15px;
-  width: 200px;
-  border: none;
-  outline: none;
-  border-radius: 4px;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
   font-size: 18px;
+  color: #908dff;
+  background-color: #1e1d38;
+  margin-bottom: 20px;
+  padding: 10px;
+  width: 100%;
+  border: none;
+  border-radius: 8px;
+  outline: none;
   appearance: none;
   cursor: pointer;
 }
@@ -14,7 +17,7 @@ select {
 label {
   position: relative;
 }
-label:after {
+/* label:after {
   content: "<>";
   font: 12px "Consolas", monospace;
   color: #666;
@@ -25,4 +28,4 @@ label:after {
   border-bottom: 1px solid #ddd;
   position: absolute;
   pointer-events: none;
-}
+} */
