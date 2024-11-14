@@ -1,5 +1,8 @@
 import { useEffect, useState } from "react";
+import Footer from "../components/Footer";
 import Header from "../components/Header";
+import RecipeAppearance from "../components/RecipeAppearance";
+import "./Recipe.css";
 
 function Recipe() {
   const [cocktailRecipe, setRecipe] = useState([]);
@@ -16,9 +19,9 @@ function Recipe() {
       {cocktailRecipe.length === 0 ? (
         <p>Loading</p>
       ) : (
-        <p>{cocktailRecipe[0]}</p>
+        <RecipeAppearance recipeData={cocktailRecipe} />
       )}
-      <h1>hello recipe</h1>
+      <Footer />
     </>
   );
 }
