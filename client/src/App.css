@@ -83,9 +83,20 @@ nav button {
   border: none;
   background-color: rgba(0, 0, 0, 0);
 }
-.alphabetSpace {
+.alphabetBtn {
   display: flex;
   justify-content: space-between;
+}
+.alphabetBtn button {
+  color: #908dff;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.alphabetBtn button:hover {
+  color: #c984ff;
+}
+.alphabetBtn button:focus {
+  color: #c984ff;
 }
 article img {
   border-top-left-radius: 8px;

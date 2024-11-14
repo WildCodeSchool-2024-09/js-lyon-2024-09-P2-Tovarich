@@ -24,7 +24,7 @@ function App() {
             <div>
               <DropdownFilter />
             </div>
-            <div className="alphabetSpace">
+            <div>
               <AlphabetList />
             </div>
           </nav>
