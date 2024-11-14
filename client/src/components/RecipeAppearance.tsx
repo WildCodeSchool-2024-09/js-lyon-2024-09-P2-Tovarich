@@ -47,11 +47,6 @@ interface cocktailProps {
 }
 
 function RecipeAppearance({ recipeData }: cocktailProps) {
-  // const list: JSX.Element[] = [];
-  // const fonctionRecette = (data: cocktailProps) => {
-  //   return list;
-  // };
-
   return (
     <>
       <div>
@@ -65,7 +60,24 @@ function RecipeAppearance({ recipeData }: cocktailProps) {
               />
             </section>
             <section className="instructions">
-              <ul>Ingredients</ul>
+              <ul>
+                Ingredients
+                <li>
+                  <p>
+                    {recipeDetail.strMeasure1} of {recipeDetail.strIngredient1}
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    {recipeDetail.strMeasure2} of {recipeDetail.strIngredient2}
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    {recipeDetail.strMeasure3} of {recipeDetail.strIngredient3}
+                  </p>
+                </li>
+              </ul>
               <h3>Instructions to recreate {recipeDetail.strDrink}</h3>
               <p>{recipeDetail.strInstructions}</p>
             </section>
