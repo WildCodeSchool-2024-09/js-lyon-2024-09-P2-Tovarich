@@ -29,7 +29,7 @@ const router = createBrowserRouter([
         element: <PageCocktail />,
       },
       {
-        path: "/Recipe/:id",
+        path: "/Recipe/:idDrink",
         element: <Recipe />,
       },
     ],

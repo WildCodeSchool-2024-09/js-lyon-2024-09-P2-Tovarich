@@ -3,10 +3,6 @@ import AlphabetList from "../components/AlphabetList";
 import Cocktail from "../components/Cocktail";
 import DropdownFilter from "../components/DropdownFilter";
 
-// interface cocktailPageProps {
-//   idDrink: number;
-// }
-
 function PageCocktail() {
   const [cocktailInformation, setCockail] = useState([]);
   useEffect(() => {
