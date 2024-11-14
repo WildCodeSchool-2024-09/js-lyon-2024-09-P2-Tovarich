@@ -1,23 +1,35 @@
-/* @font-face {
-  font-family: "Harlow Solid";
-  src: url("HarlowSolid.eot");
-  src: url("HarlowSolid.eot?#iefix") format("embedded-opentype"),
-    url("HarlowSolid.woff2") format("woff2"), url("HarlowSolid.woff")
-    format("woff");
-  font-weight: normal;
-  font-style: italic;
-  font-display: swap;
-} */
-
 header {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 20px;
 }
-
-h1 {
+header a button {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-size: 24px;
+  color: #908dff;
+  border: 2px solid rgba(0, 0, 0, 0); /*je fais de cette façon pour que le bouton n'ait pas de changement de position lors du hover*/
+  background-color: rgba(184, 92, 255, 0);
+  height: auto;
+  width: auto;
+  padding: 15px 30px;
+  cursor: pointer;
+}
+header a button:hover {
+  border: 2px solid #908dff;
+  border-radius: 8px;
+  background-color: rgba(184, 92, 255, 0);
+  cursor: pointer;
+}
+header h1 {
   font-family: "Harlow Solid", sans-serif;
   color: #c984ff;
-  font-size: 30px;
+  font-size: 60px;
   line-height: 1.7;
+  text-shadow: 0 0 30px rgba(184, 92, 255, 0.8);
+}
+header img {
+  margin-right: 10px;
 }

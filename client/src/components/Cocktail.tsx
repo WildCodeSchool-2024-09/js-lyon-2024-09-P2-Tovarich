@@ -11,7 +11,7 @@ interface cocktailProps {
 function Cocktail({ cocktailData }: cocktailProps) {
   return (
     <>
-      <figure>
+      <figure className="infoCocktail">
         <img src={cocktailData.strDrinkThumb} alt={cocktailData.strDrink} />
         <p>{cocktailData.strDrink}</p>
         <button type="button">
