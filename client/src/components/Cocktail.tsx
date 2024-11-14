@@ -20,7 +20,7 @@ function Cocktail({ cocktailData }: CocktailListProps) {
               src={cocktailDetail.strDrinkThumb}
               alt={cocktailDetail.strDrink}
             />
-            <h2>{cocktailDetail.strDrink}</h2>
+            <h4>{cocktailDetail.strDrink}</h4>
             <Link to="/recipe">
               <button type="button">More Information</button>
             </Link>
