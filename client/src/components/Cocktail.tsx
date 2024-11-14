@@ -1,32 +1,23 @@
 import { Link } from "react-router-dom";
 
-interface cocktailPros {
-  idDrink: string;
-  strDrink: string;
-  strDrinkThumb: string;
+interface cocktailProps {
+  cocktailData: {
+    idDrink: string;
+    strDrink: string;
+    strDrinkThumb: string;
+  };
 }
 
-interface CocktailListProps {
-  cocktailData: cocktailPros[];
-}
-
-function Cocktail({ cocktailData }: CocktailListProps) {
+function Cocktail({ cocktailData }: cocktailProps) {
   return (
     <>
-      <div className="totalCocktail">
-        {cocktailData.map((cocktailDetail) => (
-          <article className="infoCocktail" key={cocktailDetail.idDrink}>
-            <img
-              src={cocktailDetail.strDrinkThumb}
-              alt={cocktailDetail.strDrink}
-            />
-            <h4>{cocktailDetail.strDrink}</h4>
-            <Link to="/recipe">
-              <button type="button">More Information</button>
-            </Link>
-          </article>
-        ))}
-      </div>
+      <figure className="infoCocktail">
+        <img src={cocktailData.strDrinkThumb} alt={cocktailData.strDrink} />
+        <p>{cocktailData.strDrink}</p>
+        <button type="button">
+          <Link to={`/Recipe/${cocktailData.idDrink}`}>More information</Link>
+        </button>
+      </figure>
     </>
   );
 }

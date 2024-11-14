@@ -1,5 +1,3 @@
-import "./RecipeAppearance.css";
-
 interface cocktailPros {
   idDrink: string;
   strDrink: string;
