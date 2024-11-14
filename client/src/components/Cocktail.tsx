@@ -13,7 +13,7 @@ function Cocktail({ cocktailData }: cocktailProps) {
     <>
       <figure className="infoCocktail">
         <img src={cocktailData.strDrinkThumb} alt={cocktailData.strDrink} />
-        <p>{cocktailData.strDrink}</p>
+        <h4>{cocktailData.strDrink}</h4>
         <button type="button">
           <Link to={`/Recipe/${cocktailData.idDrink}`}>More information</Link>
         </button>

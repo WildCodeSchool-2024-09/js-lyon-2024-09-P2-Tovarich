@@ -22,6 +22,8 @@
 :root {
   --textColor: #908dff;
   --colorBackground: #1e1d38;
+  --titleColor: #c984ff;
+  --secondaryTitleColor: #f2ebf8;
 }
 
 * {
@@ -37,74 +39,70 @@ html,
   background-image: url(assets/images/bg_smooth-operator.png);
   background-repeat: repeat;
   background-position: center;
-  background-color: #1e1d38;
+  background-color: var(--colorBackground);
   margin: 0 auto;
 }
 h1 {
   font-family: "Harlow Solid", sans-serif;
   font-size: 48px;
-  color: #c984ff;
+  color: var(--titleColor);
   margin: 20px 0 30px;
 }
 h2 {
   font-family: "Nexa", sans-serif;
   font-size: 48px;
-  color: #f2ebf8;
+  color: var(--secondaryTitleColor);
   margin: 20px 0 30px;
 }
 h3 {
   font-family: "Nexa", sans-serif;
   font-size: 30px;
-  color: #c984ff;
+  color: var(--titleColor);
   margin: 0 0 10px;
 }
 h4 {
   font-family: "Nexa", sans-serif;
   font-size: 20px;
-  color: #c984ff;
+  color: var(--titleColor);
   text-align: center;
   margin: 10px 20px;
 }
 p {
   font-family: "Roboto", sans-serif;
   font-size: 14px;
-  color: #908dff;
+  color: var(--textColor);
   line-height: 20px;
 }
 nav {
   margin: 20px;
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
+  width: 100%;
 }
 nav button {
   font-family: "Nexa", sans-serif;
   font-size: 24px;
-  color: #c984ff;
+  color: var(--titleColor);
   border: none;
   background-color: rgba(0, 0, 0, 0);
 }
 .alphabetBtn {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
 }
 .alphabetBtn button {
-  color: #908dff;
+  color: var(--textColor);
   justify-content: space-between;
   cursor: pointer;
 }
 .alphabetBtn button:hover {
-  color: #c984ff;
+  color: var(--titleColor);
 }
 .alphabetBtn button:focus {
-  color: #c984ff;
+  color: var(--titleColor);
 }
-article img {
-  border-top-left-radius: 8px;
-  border-top-right-radius: 8px;
-}
-article a {
-  bottom: auto;
-}
+
 .background {
   display: flex;
   flex-direction: column;
@@ -136,19 +134,25 @@ button {
   background-color: #1e1d38;
   border-radius: 8px;
   box-shadow: 10px 0 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
 }
 .infoCocktail img {
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
   max-height: 100%;
   max-width: 100%;
 }
-
+.infoCocktail a {
+  color: var(--textColor);
+  text-decoration: none;
+}
 .infoCocktail button {
   min-height: 30px;
   margin: 5px;
   font-family: "Roboto", sans-serif;
   font-size: 12px;
   font-style: 100;
-  color: #908dff;
+  color: var(--textColor);
   justify-content: center;
   width: 75%;
   border-radius: 8px;
@@ -160,10 +164,14 @@ button {
 }
 
 @media screen and (min-width: 768px) {
+  .alphabetBtn {
+    flex-wrap: nowrap;
+  }
   .totalCocktail {
     grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 10px;
     justify-content: center;
+    margin: 0px;
   }
 
   .infoCocktail h2 {
