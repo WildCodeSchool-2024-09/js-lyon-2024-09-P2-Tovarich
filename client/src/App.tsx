@@ -21,10 +21,14 @@ function App() {
         <Header />
         <main>
           <nav>
-            <AlphabetList />
-            <DropdownFilter />
+            <div>
+              <DropdownFilter />
+            </div>
+            <div className="alphabetSpace">
+              <AlphabetList />
+            </div>
           </nav>
-          <div>
+          <div className="centered">
             {cocktailInformation.length === 0 ? (
               <p>Loading</p>
             ) : (
