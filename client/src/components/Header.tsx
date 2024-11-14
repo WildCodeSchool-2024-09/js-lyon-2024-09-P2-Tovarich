@@ -5,9 +5,10 @@ function Header() {
     <>
       <header>
         <h1>Smooth Operator</h1>
-        <Link to="/">
-          <button type="button">Home</button>
-        </Link>
+
+        <button type="button">
+          <Link to="/">Home</Link>
+        </button>
       </header>
     </>
   );
