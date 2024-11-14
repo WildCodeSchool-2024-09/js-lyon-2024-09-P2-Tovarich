@@ -1,6 +1,9 @@
 import { useEffect, useState } from "react";
-import Header from "../components/Header";
+import "./Recipe.css";
 
+import Footer from "../components/Footer";
+import Header from "../components/Header";
+import RecipeAppearance from "../components/RecipeAppearance";
 function Recipe() {
   const [cocktailRecipe, setRecipe] = useState([]);
   useEffect(() => {
@@ -16,9 +19,11 @@ function Recipe() {
       {cocktailRecipe.length === 0 ? (
         <p>Loading</p>
       ) : (
-        <p>{cocktailRecipe[0]}</p>
+        <p>
+          <RecipeAppearance recipeData={cocktailRecipe} />
+        </p>
       )}
-      <h1>hello recipe</h1>
+      <Footer />
     </>
   );
 }
