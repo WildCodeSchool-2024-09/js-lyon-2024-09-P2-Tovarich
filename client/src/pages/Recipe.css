@@ -11,10 +11,7 @@
 }
 
 :root {
-  --textColor: #908dff;
-  --titleColor: #c984ff;
   --colorRectangle: #282748;
-  --colorBackground: #1e1d38;
   --fontForText: "Roboto", serif;
 }
 

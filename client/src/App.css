@@ -36,7 +36,7 @@ html,
 #root {
   height: 100%;
   max-width: 1160px;
-  background-image: url(assets/images/bg_smooth-operator.png);
+  background-image: url(assets/images/Bg_SmoothOperator.png);
   background-repeat: repeat;
   background-position: center;
   background-color: var(--colorBackground);
