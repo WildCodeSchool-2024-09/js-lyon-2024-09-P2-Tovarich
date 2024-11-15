@@ -1,26 +1,17 @@
 import "./App.css";
-import Cocktail from "./components/Cocktail";
-import DropdownFilter from "./components/DropdownFilter";
+import "./components/Header.css";
+import { Outlet } from "react-router-dom";
 import Footer from "./components/Footer";
-import Liste from "./components/Liste";
-import Title from "./components/Title";
+import Header from "./components/Header";
 
-const cocktailSample = [
-  {
-    name: "Virgin Mojito",
-    image: "./src/assets/images/Mojito-sans-alcool.jpg",
-  },
-];
 function App() {
   return (
     <>
-      <div className="background">
-        <Title />
-        <Liste />
-        <DropdownFilter />
-        <Cocktail cocktailData={cocktailSample} />
-        <Footer />
+      <Header />
+      <div className="centered">
+        <Outlet />
       </div>
+      <Footer />
     </>
   );
 }

@@ -1,9 +1,29 @@
-@import url("https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@font-face {
+  font-family: "Harlow Solid";
+  src: url("/src/assets/font/Harlow/HarlowSolid.eot");
+  src: url("/src/assets/font/Harlow/HarlowSolid.eot?#iefix")
+    format("embedded-opentype"),
+    url("/src/assets/font/Harlow/HarlowSolid.woff2") format("woff2"),
+    url("/src/assets/font/Harlow/HarlowSolid.woff") format("woff"),
+    url("/src/assets/font/Harlow/HarlowSolid.otf") format("opentype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Nexa";
+  src: url("/src/assets/font/Nexa/Nexa-Light-Italic.eot");
+  src: url("/src/assets/font/Nexa//Nexa-Light-Italic.eot?#iefix")
+    format("embedded-opentype"),
+    url("/src/assets/font/Nexa//Nexa-Light-Italic.woff2") format("woff2"),
+    url("/src/assets/font/Nexa//Nexa-Light-Italic.woff") format("woff");
+  font-display: swap;
+}
 
 :root {
-  --textColor: #ff6fd8;
-  --colorBackground: #d9d9d9;
-  --fontForText: "Tilt Neon", sans-serif;
+  --textColor: #908dff;
+  --colorBackground: #1e1d38;
+  --titleColor: #c984ff;
+  --secondaryTitleColor: #f2ebf8;
 }
 
 * {
@@ -15,88 +35,146 @@ body,
 html,
 #root {
   height: 100%;
+  max-width: 1160px;
+  background-image: url(assets/images/Bg_SmoothOperator.png);
+  background-repeat: repeat;
+  background-position: center;
+  background-color: var(--colorBackground);
+  margin: 0 auto;
 }
-
 h1 {
-  font-family: "Lato", sans-serif;
-  font-size: 20px;
-  line-height: 1.7;
-  color: #ff6fd8;
-  /* margin: 0 auto; */
-  /* align-items: center; */ /* >> vertical */
-  display: flex;
-  justify-content: center;
+  font-family: "Harlow Solid", sans-serif;
+  font-size: 48px;
+  color: var(--titleColor);
+  margin: 20px 0 30px;
 }
-
-footer {
-  font-family: "Lato", sans-serif;
+h2 {
+  font-family: "Nexa", sans-serif;
+  font-size: 48px;
+  color: var(--secondaryTitleColor);
+  margin: 20px 0 30px;
+}
+h3 {
+  font-family: "Nexa", sans-serif;
+  font-size: 30px;
+  color: var(--titleColor);
+  margin: 0 0 10px;
+}
+h4 {
+  font-family: "Nexa", sans-serif;
   font-size: 20px;
-  line-height: 1.7;
-  color: #ff6fd8;
-  /* margin: 0 auto; */
-  /* align-items: center; */ /* >> vertical */
+  color: var(--titleColor);
+  text-align: center;
+  margin: 10px 20px;
+}
+p {
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  color: var(--textColor);
+  line-height: 20px;
+}
+nav {
+  margin: 20px;
   display: flex;
-  justify-content: center;
+  flex-direction: column-reverse;
+  width: 100%;
+}
+nav button {
+  font-family: "Nexa", sans-serif;
+  font-size: 24px;
+  color: var(--titleColor);
+  border: none;
+  background-color: rgba(0, 0, 0, 0);
+}
+.alphabetBtn {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.alphabetBtn button {
+  color: var(--textColor);
+  justify-content: space-between;
+  cursor: pointer;
+}
+.alphabetBtn button:hover {
+  color: var(--titleColor);
+}
+.alphabetBtn button:focus {
+  color: var(--titleColor);
 }
 
 .background {
-  background-image: url(assets/fondSpatiale.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  background-color: rgba(255, 255, 255, 0.35);
-  background-blend-mode: overlay;
-  min-height: 100%;
+  display: flex;
+  flex-direction: column;
 }
-
+.centered {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+}
 button {
-  height: 5vh;
-  font-size: 5vh;
+  height: 25px;
+  font-size: 20px;
 }
-
 .totalCocktail {
   display: grid;
   grid-template-columns: 1fr;
-  justify-items: center;
+  justify-content: center;
+  gap: 15px;
+  justify-self: center;
+  margin: 0 20px;
 }
-
 .infoCocktail {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-items: center;
-  margin: 55px;
-  padding: 35px;
-  padding-bottom: clamp(35px, 10vh, 200px);
-  background-color: var(--colorBackground);
-  border-radius: 15px;
-  max-height: 400px;
-  max-width: 400px;
+  margin: 5px;
+  background-color: #1e1d38;
+  border-radius: 8px;
+  box-shadow: 10px 0 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
 }
-
 .infoCocktail img {
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
   max-height: 100%;
   max-width: 100%;
 }
-
-.infoCocktail h2 {
-  font-family: var(--fontForText);
-  font-size: 5vh;
-  text-align: center;
+.infoCocktail a {
+  color: var(--textColor);
+  text-decoration: none;
 }
-
 .infoCocktail button {
   min-height: 30px;
   margin: 5px;
-  font-family: var(--fontForText);
-  font-size: small;
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+  font-style: 100;
+  color: var(--textColor);
   justify-content: center;
   width: 75%;
-  border-radius: 5px;
-  border: 6px rgb(243, 166, 191);
-  background-color: rgb(243, 166, 191);
+  border-radius: 8px;
+  border: 2px rgb(243, 166, 191);
+  background-color: rgba(243, 166, 190, 0.0);
+}
+.infoCocktail button:hover {
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.1);
 }
 
-.infoCocktail button:hover {
-  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.23);
+@media screen and (min-width: 768px) {
+  .alphabetBtn {
+    flex-wrap: nowrap;
+  }
+  .totalCocktail {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 10px;
+    justify-content: center;
+    margin: 0px;
+  }
+
+  .infoCocktail h2 {
+    font-size: 3vh;
+  }
 }
