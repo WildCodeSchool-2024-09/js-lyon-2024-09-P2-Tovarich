@@ -13,19 +13,6 @@ select {
   appearance: none;
   cursor: pointer;
 }
-
 label {
   position: relative;
 }
-/* label:after {
-  content: "<>";
-  font: 12px "Consolas", monospace;
-  color: #666;
-  transform: rotate(90deg);
-  right: 15px;
-  top: 15px;
-  padding: 0 0 2px;
-  border-bottom: 1px solid #ddd;
-  position: absolute;
-  pointer-events: none;
-} */
