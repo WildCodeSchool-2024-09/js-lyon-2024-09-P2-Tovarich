@@ -26,6 +26,19 @@ li {
   margin-left: 10px;
   margin-right: 10px;
 }
+.infoRecipe button {
+  display: flex;
+  justify-self: center;
+  font-family: "Roboto", sans-serif;
+  font-size: 24px;
+
+  border: none;
+  background-color: rgba(0, 0, 0, 0);
+}
+.infoRecipe a {
+  color: var(--textColor);
+  text-decoration: none;
+}
 
 @media screen and (min-width: 768px) {
   .image,

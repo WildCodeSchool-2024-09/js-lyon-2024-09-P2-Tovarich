@@ -3,6 +3,7 @@ import "../components/RecipeAppearance.css";
 import AlphabetList from "../components/AlphabetList";
 import Cocktail from "../components/Cocktail";
 import DropdownFilter from "../components/DropdownFilter";
+import PopularCocktail from "../components/PopularCocktail";
 
 function PageCocktail() {
   const generateKey = (pre: number) => {
@@ -14,9 +15,16 @@ function PageCocktail() {
       .then((res) => res.json())
       .then((data) => setCockail(data.drinks));
   }, []);
+  const [randomCocktail, setRandomCocktail] = useState([]);
+  useEffect(() => {
+    fetch("https://www.thecocktaildb.com/api/json/v1/1/random.php")
+      .then((res) => res.json())
+      .then((data) => setRandomCocktail(data.drinks));
+  }, []);
 
   return (
     <>
+      <PopularCocktail recipeData={randomCocktail} />
       <nav>
         <AlphabetList />
         <DropdownFilter />
