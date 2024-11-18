@@ -12,9 +12,14 @@ function Recipe() {
       .then((res) => res.json())
       .then((recipe) => setRecipe(recipe.drinks));
   }, [idDrink]);
+
   return (
     <>
-      <RecipeAppearance recipeData={cocktailRecipe} />
+      {cocktailRecipe === null ? (
+        <h2>Ceci n'est pas une recette</h2>
+      ) : (
+        <RecipeAppearance recipeData={cocktailRecipe} />
+      )}
     </>
   );
 }
