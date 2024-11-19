@@ -27,9 +27,19 @@ function RecipeAppearance({ recipeData }: cocktailProps) {
                 </p>
               </li>
               <li>
-                <p>
-                  {recipeDetail.strMeasure3} of {recipeDetail.strIngredient3}
-                </p>
+                {recipeDetail.strMeasure3 === null ? (
+                  ""
+                ) : (
+                  <p>
+                    {recipeDetail.strMeasure3} of {recipeDetail.strIngredient3}
+                  </p>
+                )}
+                {recipeDetail.strMeasure3 === null &&
+                recipeDetail.strIngredient3 !== null ? (
+                  <p>{recipeDetail.strIngredient3}</p>
+                ) : (
+                  ""
+                )}
               </li>
             </ul>
             <h3>Instructions to recreate {recipeDetail.strDrink}</h3>
