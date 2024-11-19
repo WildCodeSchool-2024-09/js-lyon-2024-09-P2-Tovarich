@@ -16,6 +16,7 @@
 li {
   list-style: none;
   display: flex;
+  flex-direction: row;
 }
 .instructions {
   margin-left: 10px;

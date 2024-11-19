@@ -37,9 +37,20 @@ function PopularCocktail({ recipeData }: cocktailProps) {
                 </p>
               </li>
               <li>
-                <p>
-                  {recipePopular.strMeasure3} of {recipePopular.strIngredient3}
-                </p>
+                {recipePopular.strMeasure3 === null ? (
+                  ""
+                ) : (
+                  <p>
+                    {recipePopular.strMeasure3} of{" "}
+                    {recipePopular.strIngredient3}
+                  </p>
+                )}
+                {recipePopular.strMeasure3 === null &&
+                recipePopular.strIngredient3 !== null ? (
+                  <p>{recipePopular.strIngredient3}</p>
+                ) : (
+                  ""
+                )}
               </li>
             </ul>
             <h3>Instructions to recreate {recipePopular.strDrink}</h3>
