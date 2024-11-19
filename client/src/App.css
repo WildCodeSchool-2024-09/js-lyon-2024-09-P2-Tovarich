@@ -24,6 +24,7 @@
   --colorBackground: #1e1d38;
   --titleColor: #c984ff;
   --secondaryTitleColor: #f2ebf8;
+  --colorRectangle: #282748;
 }
 
 * {
@@ -35,7 +36,7 @@ body,
 html,
 #root {
   height: 100%;
-  max-width: 1160px;
+  max-width: 1560px;
   background-image: url(assets/images/Bg_SmoothOperator.png);
   background-repeat: repeat;
   background-position: center;
@@ -47,18 +48,21 @@ h1 {
   font-size: 48px;
   color: var(--titleColor);
   margin: 20px 0 30px;
+  font-weight: normal;
 }
 h2 {
   font-family: "Nexa", sans-serif;
   font-size: 48px;
   color: var(--secondaryTitleColor);
   margin: 20px 0 30px;
+  font-weight: normal;
 }
 h3 {
   font-family: "Nexa", sans-serif;
   font-size: 30px;
   color: var(--titleColor);
   margin: 0 0 10px;
+  font-weight: normal;
 }
 h4 {
   font-family: "Nexa", sans-serif;
@@ -66,6 +70,7 @@ h4 {
   color: var(--titleColor);
   text-align: center;
   margin: 10px 20px;
+  font-weight: normal;
 }
 p {
   font-family: "Roboto", sans-serif;
