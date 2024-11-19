@@ -7,11 +7,12 @@ function Header() {
     <>
       <header>
         <h1>Smooth Operator</h1>
-
-        <button type="button">
-          <img src={iconHome} alt="icon home" />
-          <Link to="/">Home</Link>
-        </button>
+        <Link to="/" className="LinkHome">
+          <button type="button">
+            <img src={iconHome} alt="icon home" />
+            <p>Home</p>
+          </button>
+        </Link>
       </header>
     </>
   );
