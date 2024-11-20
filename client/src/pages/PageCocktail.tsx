@@ -33,7 +33,10 @@ function PageCocktail() {
         `https://www.thecocktaildb.com/api/json/v1/1/search.php?f=${letter}`,
       )
         .then((res) => res.json())
-        .then((data) => setCockail(data.drinks));
+        .then((data) => {
+          setCocktail(data.drinks);
+          setCocktailCounter(data.drinks.length);
+        });
     }
   }, [letter]);
 

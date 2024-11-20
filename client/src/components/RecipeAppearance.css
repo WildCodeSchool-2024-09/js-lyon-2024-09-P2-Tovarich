@@ -61,10 +61,8 @@ li {
     grid-template-columns: 2fr 3fr;
     width: 100%;
   }
-  .instructions {
-    grid-row-start: 1;
-    grid-row-end: 3;
-    grid-column-start: 2;
-    align-self: center;
+  .infoRecipe h2 {
+    grid-column-start: 1;
+    grid-column-end: 3;
   }
 }

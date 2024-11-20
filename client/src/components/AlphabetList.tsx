@@ -41,7 +41,7 @@ const list = [
   "9",
 ];
 
-function AlphabetList({ letter, setLetter }: letterProps) {
+function AlphabetList({ setLetter }: letterProps) {
   return (
     <section className="alphabetBtn">
       {list.map((Alphabet) => (
