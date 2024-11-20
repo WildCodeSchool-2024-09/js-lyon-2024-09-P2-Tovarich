@@ -43,7 +43,7 @@ const list = [
 
 function AlphabetList({ setLetter }: letterProps) {
   return (
-    <section className="alphabetBtn">
+    <div className="alphabetBtn">
       {list.map((Alphabet) => (
         <button
           type="button"
@@ -53,7 +53,7 @@ function AlphabetList({ setLetter }: letterProps) {
           {Alphabet}
         </button>
       ))}
-    </section>
+    </div>
   );
 }
 
