@@ -1,0 +1,31 @@
+.alcohol {
+  display: flex;
+  flex-direction: row;
+  gap: 2%;
+}
+.alcoolButton {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+  color: #908dff;
+  background-color: rgba(184, 92, 255, 0);
+  height: auto;
+  width: 200px;
+  padding: 15px 30px;
+  border: 2px solid #908dff;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* label:after {
+    content: "<>";
+    font: 12px "Consolas", monospace;
+    color: #666;
+    transform: rotate(90deg);
+    right: 15px;
+    top: 15px;
+    padding: 0 0 2px;
+    border-bottom: 1px solid #ddd;
+    position: absolute;
+    pointer-events: none;
+  } */
