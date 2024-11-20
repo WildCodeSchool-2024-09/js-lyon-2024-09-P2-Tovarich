@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import "../components/RecipeAppearance.css";
 import AlphabetList from "../components/AlphabetList";
 import Cocktail from "../components/Cocktail";
-import DropdownFilter from "../components/DropdownFilter";
+/*import DropdownFilter from "../components/DropdownFilter";*/
 
 function PageCocktail() {
   const generateKey = (pre: number) => {
@@ -19,7 +19,6 @@ function PageCocktail() {
     <>
       <nav>
         <AlphabetList />
-        <DropdownFilter />
       </nav>
       <main className="totalCocktail">
         {cocktailInformation.map((cocktailDetail, index) => (
