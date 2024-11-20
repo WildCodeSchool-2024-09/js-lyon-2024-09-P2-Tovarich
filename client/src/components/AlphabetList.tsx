@@ -1,3 +1,8 @@
+interface letterProps {
+  letter: string;
+  setLetter: (letter: string) => void;
+}
+
 const list = [
   "A",
   "B",
@@ -25,13 +30,26 @@ const list = [
   "X",
   "Y",
   "Z",
+  "1",
+  "2",
+  "3",
+  "4",
+  "5",
+  "6",
+  "7",
+  "8",
+  "9",
 ];
 
-function AlphabetList() {
+function AlphabetList({ setLetter }: letterProps) {
   return (
     <section className="alphabetBtn">
       {list.map((Alphabet) => (
-        <button type="button" key={Alphabet}>
+        <button
+          type="button"
+          key={Alphabet}
+          onClick={() => setLetter(Alphabet)}
+        >
           {Alphabet}
         </button>
       ))}
