@@ -15,7 +15,7 @@ function RecipeAppearance({ recipeData }: cocktailProps) {
           </section>
           <section className="instructions">
             <ul>
-              Ingredients
+              <h3>Ingredients</h3>
               <li>
                 <p>
                   {recipeDetail.strMeasure1} of {recipeDetail.strIngredient1}
