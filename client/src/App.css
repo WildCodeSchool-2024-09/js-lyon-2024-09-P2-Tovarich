@@ -20,11 +20,12 @@
 }
 
 :root {
-  --textColor: #908dff;
   --colorBackground: #1e1d38;
-  --titleColor: #c984ff;
+  --titleColor: #ff00ff;
   --secondaryTitleColor: #f2ebf8;
-  --colorRectangle: #282748;
+  --textColor: #aaa7ff;
+  --DarkLightBg: #282748;
+  --DarkBg: #1e1d38;
 }
 
 * {
@@ -45,28 +46,28 @@ html,
 }
 h1 {
   font-family: "Harlow Solid", sans-serif;
-  font-size: 48px;
+  font-size: 4.45vh;
   color: var(--titleColor);
   margin: 20px 0 30px;
   font-weight: normal;
 }
 h2 {
   font-family: "Nexa", sans-serif;
-  font-size: 48px;
+  font-size: 4.45vh;
   color: var(--secondaryTitleColor);
   margin: 20px 0 30px;
   font-weight: normal;
 }
 h3 {
   font-family: "Nexa", sans-serif;
-  font-size: 30px;
+  font-size: 2.8vh;
   color: var(--titleColor);
   margin: 0 0 10px;
   font-weight: normal;
 }
 h4 {
   font-family: "Nexa", sans-serif;
-  font-size: 20px;
+  font-size: 2.45vh;
   color: var(--titleColor);
   text-align: center;
   margin: 10px 20px;
@@ -74,7 +75,7 @@ h4 {
 }
 p {
   font-family: "Roboto", sans-serif;
-  font-size: 14px;
+  font-size: 1.75vh;
   color: var(--textColor);
   line-height: 20px;
 }
@@ -124,6 +125,37 @@ button {
   height: 25px;
   font-size: 20px;
 }
+.refreshCocktail {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.refreshCocktail img {
+  height: clamp(100px, 40vh, 500px);
+  border-radius: 8px;
+}
+.refreshCocktail button {
+  display: flex;
+  justify-self: center;
+  font-family: "Roboto", sans-serif;
+  font-size: 24px;
+  margin: 15px 0;
+  border: none;
+  background-color: rgba(0, 0, 0, 0);
+}
+.refreshCocktail a {
+  color: var(--textColor);
+  text-decoration: none;
+}
+.refreshSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.neon {
+  display: none;
+}
 .totalCocktail {
   display: grid;
   grid-template-columns: 1fr;
@@ -138,7 +170,7 @@ button {
   align-items: center;
   justify-items: center;
   margin: 5px;
-  background-color: #1e1d38;
+  background-color: var(--DarkBg);
   border-radius: 8px;
   box-shadow: 10px 0 20px rgba(0, 0, 0, 0.1);
   text-align: center;
@@ -152,13 +184,15 @@ button {
 .infoCocktail a {
   color: var(--textColor);
   text-decoration: none;
+  font-size: 1.90vh;
 }
 .infoCocktail button {
   min-height: 30px;
-  margin: 5px;
+  margin-bottom: 15px;
+  margin-top: auto;
   font-family: "Roboto", sans-serif;
-  font-size: 12px;
   font-style: 100;
+  font-size: 1.7vh;
   color: var(--textColor);
   justify-content: center;
   width: 75%;
@@ -167,7 +201,7 @@ button {
   background-color: rgba(243, 166, 190, 0);
 }
 .infoCocktail button:hover {
-  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.1);
+  text-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.1);
 }
 .filterElement {
   display: flex;
@@ -181,14 +215,22 @@ button {
     flex-wrap: nowrap;
   }
   .totalCocktail {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(4, minmax(150px, 1fr));
     gap: 10px;
     justify-content: center;
     margin: 0px;
   }
-
   .infoCocktail h2 {
     font-size: 3vh;
+  }
+  .neon {
+    display: unset;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+    margin-top: 15px;
+    margin-bottom: 15px;
   }
   .filterElement {
     display: flex;

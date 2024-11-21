@@ -1,6 +1,9 @@
 import { Link } from "react-router-dom";
 import type { CocktailProsTypes } from "../types/CocktailProsTypes";
 
+import neonShaker from "../assets/images/neon-shaker.png";
+import neonVerre from "../assets/images/neon-verre.png";
+
 interface cocktailProps {
   recipeData: CocktailProsTypes[];
 }
@@ -10,52 +13,20 @@ function PopularCocktail({ recipeData }: cocktailProps) {
     <>
       <h2 className="popularTitle">Popular refreshing cocktail</h2>
       {recipeData.map((recipePopular) => (
-        <article className="infoRecipe" key={recipePopular.idDrink}>
-          <h2>Recipe of the {recipePopular.strDrink}</h2>
-          <section className="image">
+        <article className="refreshCocktail" key={recipePopular.idDrink}>
+          <img className="neon" src={neonVerre} alt="neon verre" />
+          <section className="refreshSection">
             <img
               src={recipePopular.strDrinkThumb}
               alt={recipePopular.strDrink}
             />
             <button type="button">
               <Link to={`/Recipe/${recipePopular.idDrink}`}>
-                More information
+                <h3>Recipe of the {recipePopular.strDrink}</h3>
               </Link>
             </button>
           </section>
-          <section className="instructions">
-            <ul>
-              Ingredients
-              <li>
-                <p>
-                  {recipePopular.strMeasure1} of {recipePopular.strIngredient1}
-                </p>
-              </li>
-              <li>
-                <p>
-                  {recipePopular.strMeasure2} of {recipePopular.strIngredient2}
-                </p>
-              </li>
-              <li>
-                {recipePopular.strMeasure3 === null ? (
-                  ""
-                ) : (
-                  <p>
-                    {recipePopular.strMeasure3} of{" "}
-                    {recipePopular.strIngredient3}
-                  </p>
-                )}
-                {recipePopular.strMeasure3 === null &&
-                recipePopular.strIngredient3 !== null ? (
-                  <p>{recipePopular.strIngredient3}</p>
-                ) : (
-                  ""
-                )}
-              </li>
-            </ul>
-            <h3>Instructions to recreate {recipePopular.strDrink}</h3>
-            <p>{recipePopular.strInstructions}</p>
-          </section>
+          <img className="neon" src={neonShaker} alt="neon shaker" />
         </article>
       ))}
     </>
