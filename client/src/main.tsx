@@ -7,6 +7,7 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 
 // Import the main app component
 import App from "./App";
+import ErrorNotFound from "./pages/ErrorNotFound";
 import PageCocktail from "./pages/PageCocktail";
 import Recipe from "./pages/Recipe";
 
@@ -32,6 +33,7 @@ const router = createBrowserRouter([
         path: "/Recipe/:idDrink",
         element: <Recipe />,
       },
+      { path: "*", element: <ErrorNotFound /> },
     ],
   },
   // Try adding a new route! For example, "/about" with an About component
