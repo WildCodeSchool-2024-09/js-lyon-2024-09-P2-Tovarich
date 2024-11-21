@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-import iconHome from "../assets/images/IconHome.png";
+import IconHome from "../assets/images/IconHome.png";
 
 function Header() {
   return (
@@ -9,7 +9,7 @@ function Header() {
         <h1>Smooth Operator</h1>
         <Link to="/" className="LinkHome">
           <button type="button">
-            <img src={iconHome} alt="icon home" />
+            <img src={IconHome} alt="Icon Home" />
             <p>Home</p>
           </button>
         </Link>
