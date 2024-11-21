@@ -3,6 +3,7 @@ import "../components/RecipeAppearance.css";
 import AlphabetList from "../components/AlphabetList";
 import Cocktail from "../components/Cocktail";
 import CocktailButton from "../components/CocktailButton";
+import FilterGlasses from "../components/FilterGlasses";
 import PopularCocktail from "../components/PopularCocktail";
 
 function PageCocktail() {
@@ -70,17 +71,32 @@ function PageCocktail() {
     }
   }, [noAlcool]);
 
+  const [glass, setGlass] = useState("");
+  useEffect(() => {
+    if (glass !== "") {
+      fetch(`https://www.thecocktaildb.com/api/json/v1/1/filter.php?g=${glass}`)
+        .then((res) => res.json())
+        .then((data) => {
+          setCocktail(data.drinks);
+          setCocktailCounter(data.drinks.length);
+        });
+    }
+  }, [glass]);
+
   return (
     <>
       <PopularCocktail recipeData={randomCocktail} />
       <nav>
+        <div className="filterElement">
+          <CocktailButton
+            alcool={alcool}
+            setAlcool={setAlcool}
+            noAlcool={noAlcool}
+            setNoAlcool={setNoAlcool}
+          />
+          <FilterGlasses glass={glass} setGlass={setGlass} />
+        </div>
         <AlphabetList letter={letter} setLetter={setLetter} />
-        <CocktailButton
-          alcool={alcool}
-          setAlcool={setAlcool}
-          noAlcool={noAlcool}
-          setNoAlcool={setNoAlcool}
-        />
       </nav>
       <div className="cocktailCount">
         <h1>Cocktails</h1>
