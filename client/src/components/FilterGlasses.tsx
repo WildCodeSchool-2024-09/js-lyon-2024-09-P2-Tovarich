@@ -19,8 +19,8 @@ function FilterGlasses({ setGlass, glass }: glassProps) {
   }, []);
 
   const glassSpace = (glass: string) => {
-    const Yves = glass.split(" "); //Poses pas de questions, y a pas de réponses
-    const result = Yves.join("_");
+    const array = glass.split(" "); //Poses pas de questions, y a pas de réponses
+    const result = array.join("_");
     return result;
   };
 
