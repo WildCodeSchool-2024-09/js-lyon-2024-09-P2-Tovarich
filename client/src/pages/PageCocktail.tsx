@@ -13,6 +13,8 @@ interface cocktailProps {
   strDrinkThumb: string;
 }
 
+import FilterCategories from "../components/FilterCategory";
+
 function PageCocktail() {
   const generateKey = (pre: number) => {
     return `${pre}_${new Date().getTime()}`;
@@ -89,6 +91,21 @@ function PageCocktail() {
         });
     }
   }, [glass]);
+
+  const [category, setCategory] = useState("");
+  useEffect(() => {
+    if (category !== "") {
+      fetch(
+        `https://www.thecocktaildb.com/api/json/v1/1/filter.php?c=${category}`,
+      )
+        .then((res) => res.json())
+        .then((data) => {
+          setCocktail(data.drinks);
+          setCocktailCounter(data.drinks.length);
+        });
+    }
+  }, [category]);
+
   return (
     <>
       <PopularCocktail recipeData={randomCocktail} />
@@ -101,6 +118,7 @@ function PageCocktail() {
             setNoAlcool={setNoAlcool}
           />
           <FilterGlasses glass={glass} setGlass={setGlass} />
+          <FilterCategories category={category} setCategory={setCategory} />
           <Input
             setCocktail={setCocktail}
             setCocktailCounter={setCocktailCounter}
