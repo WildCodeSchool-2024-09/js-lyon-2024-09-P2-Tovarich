@@ -5,13 +5,22 @@ import Cocktail from "../components/Cocktail";
 import CocktailButton from "../components/CocktailButton";
 import FilterGlasses from "../components/FilterGlasses";
 import FilterIngredients from "../components/FilterIngredients";
+import Input from "../components/Input";
 import PopularCocktail from "../components/PopularCocktail";
+
+interface cocktailProps {
+  idDrink: string;
+  strDrink: string;
+  strDrinkThumb: string;
+}
+
+import FilterCategories from "../components/FilterCategory";
 
 function PageCocktail() {
   const generateKey = (pre: number) => {
     return `${pre}_${new Date().getTime()}`;
   };
-  const [cocktailInformation, setCocktail] = useState([]);
+  const [cocktailInformation, setCocktail] = useState<cocktailProps[]>([]);
   const [cocktailCounter, setCocktailCounter] = useState(0);
 
   useEffect(() => {
@@ -97,6 +106,19 @@ function PageCocktail() {
         });
     }
   }, [ingredient]);
+  const [category, setCategory] = useState("");
+  useEffect(() => {
+    if (category !== "") {
+      fetch(
+        `https://www.thecocktaildb.com/api/json/v1/1/filter.php?c=${category}`,
+      )
+        .then((res) => res.json())
+        .then((data) => {
+          setCocktail(data.drinks);
+          setCocktailCounter(data.drinks.length);
+        });
+    }
+  }, [category]);
 
   return (
     <>
@@ -114,6 +136,13 @@ function PageCocktail() {
             Ingredient={ingredient}
             setIngredient={setIngredient}
           />
+          <FilterCategories category={category} setCategory={setCategory} />
+          <Input
+            setCocktail={setCocktail}
+            setCocktailCounter={setCocktailCounter}
+            cocktail={cocktailInformation}
+            cocktailCounter={cocktailCounter}
+          />
         </div>
         <AlphabetList letter={letter} setLetter={setLetter} />
       </nav>
@@ -122,7 +151,7 @@ function PageCocktail() {
         <p> {cocktailCounter} Résultat(s)</p>
       </div>
       <main className="totalCocktail">
-        {cocktailInformation === null ? (
+        {cocktailInformation === null || cocktailInformation.length === 0 ? (
           <h2>Pas de cocktail</h2>
         ) : (
           cocktailInformation.map((cocktailDetail, index) => (
