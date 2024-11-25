@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import "./FilterCategory.css";
 
 interface categoriesProps {
   strCategory: string;
