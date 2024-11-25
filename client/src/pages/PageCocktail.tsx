@@ -42,7 +42,7 @@ function PageCocktail() {
   useEffect(() => {
     if (letter !== "") {
       fetch(
-        `https://www.thecocktaildb.com/api/json/v1/1/search.php?f=${letter}`
+        `https://www.thecocktaildb.com/api/json/v1/1/search.php?f=${letter}`,
       )
         .then((res) => res.json())
         .then((data) => {
@@ -56,7 +56,7 @@ function PageCocktail() {
   useEffect(() => {
     if (alcool === true) {
       fetch(
-        "https://www.thecocktaildb.com/api/json/v1/1/filter.php?a=Alcoholic"
+        "https://www.thecocktaildb.com/api/json/v1/1/filter.php?a=Alcoholic",
       )
         .then((res) => res.json())
         .then((data) => {
@@ -70,7 +70,7 @@ function PageCocktail() {
   useEffect(() => {
     if (noAlcool === true) {
       fetch(
-        " https://www.thecocktaildb.com/api/json/v1/1/filter.php?a=Non_Alcoholic"
+        " https://www.thecocktaildb.com/api/json/v1/1/filter.php?a=Non_Alcoholic",
       )
         .then((res) => res.json())
         .then((data) => {
@@ -96,7 +96,7 @@ function PageCocktail() {
   useEffect(() => {
     if (category !== "") {
       fetch(
-        `https://www.thecocktaildb.com/api/json/v1/1/filter.php?c=${category}`
+        `https://www.thecocktaildb.com/api/json/v1/1/filter.php?c=${category}`,
       )
         .then((res) => res.json())
         .then((data) => {
