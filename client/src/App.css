@@ -45,7 +45,7 @@ html,
 }
 h1 {
   font-family: "Harlow Solid", sans-serif;
-  font-size: 2.625rem;
+  font-size: 2.5rem;
   color: var(--titleColor);
   margin: 20px 0 30px;
   font-weight: normal;
@@ -133,6 +133,7 @@ button {
 }
 .refreshCocktail img {
   height: clamp(100px, 40vh, 500px);
+  width: fit-content;
   border-radius: 8px;
 }
 .refreshCocktail button {
@@ -145,6 +146,8 @@ button {
 .refreshCocktail a {
   color: var(--textColor);
   text-decoration: none;
+  display: flex;
+  flex-wrap: wrap;
 }
 .refreshSection {
   display: flex;
@@ -233,6 +236,8 @@ button {
   .filterElement {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 10px;
   }
   .alphabetBtn {

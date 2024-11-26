@@ -148,7 +148,7 @@ function PageCocktail() {
       </nav>
       <div className="cocktailCount">
         <h1>Cocktails</h1>
-        <p> {cocktailCounter} Résultat(s)</p>
+        <p> {cocktailCounter} Results(s)</p>
       </div>
       <main className="totalCocktail">
         {cocktailInformation === null || cocktailInformation.length === 0 ? (
