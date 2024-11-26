@@ -19,7 +19,7 @@ function FilterGlasses({ setGlass, glass }: glassProps) {
   }, []);
 
   const glassSpace = (glass: string) => {
-    const array = glass.split(" "); //Poses pas de questions, y a pas de réponses
+    const array = glass.split(" ");
     const result = array.join("_");
     return result;
   };
@@ -29,11 +29,11 @@ function FilterGlasses({ setGlass, glass }: glassProps) {
       <label>
         <select
           onChange={(e) => setGlass(glassSpace(e.target.value))}
-          defaultValue="Sélectionnez un verre"
+          defaultValue="Select a glass"
           value={glass}
         >
           <option value="">
-            Sélectionnez un verre
+            Select a glass
             <img
               src="client\src\assets\images\dropdownarrow-removebg-preview.png"
               alt="dropdown arrow"

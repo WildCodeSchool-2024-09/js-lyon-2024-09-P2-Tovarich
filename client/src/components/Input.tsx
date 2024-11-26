@@ -41,7 +41,7 @@ function Input({ setCocktail, setCocktailCounter }: setCocktailProps) {
       <label>
         <input
           name="myInput"
-          placeholder="Choisissez un cocktail"
+          placeholder="Choose a name"
           type="text"
           onChange={(e: { currentTarget: { value: string } }) =>
             parseInput(e.currentTarget.value)

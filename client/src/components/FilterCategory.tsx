@@ -28,11 +28,11 @@ function FilterCategories({ setCategory, category }: categoryProps) {
       <label>
         <select
           onChange={(e) => setCategory(categorySpace(e.target.value))}
-          defaultValue="Sélectionnez une Categorie"
+          defaultValue="Select a category"
           value={category}
         >
           <option value="">
-            Sélectionnez une Categorie
+            Select a category
             <img
               src="client\src\assets\images\dropdownarrow-removebg-preview.png"
               alt="dropdown arrow"
