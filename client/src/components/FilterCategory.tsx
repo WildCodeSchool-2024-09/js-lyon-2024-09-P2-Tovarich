@@ -31,13 +31,7 @@ function FilterCategories({ setCategory, category }: categoryProps) {
           defaultValue="Select a category"
           value={category}
         >
-          <option value="">
-            Select a category
-            <img
-              src="client\src\assets\images\dropdownarrow-removebg-preview.png"
-              alt="dropdown arrow"
-            />
-          </option>
+          <option value="">Select a category</option>
           {categories.map((categoriesFilter) => (
             <option
               value={categoriesFilter.strCategory}
