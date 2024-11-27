@@ -17,27 +17,13 @@ function FilterGlasses({ setGlass, glass }: glassProps) {
       .then((data) => setGlasses(data.drinks));
   }, []);
 
-  const glassSpace = (glass: string) => {
-    const array = glass.split(" ");
-    const result = array.join("_");
-    return result;
-  };
-
   return (
     <>
       <label>
-        <select
-          onChange={(e) => setGlass(glassSpace(e.target.value))}
-          defaultValue="Select a glass"
-          value={glass}
-        >
+        <select onChange={(e) => setGlass(e.target.value)} value={glass || ""}>
           <option value="">Select a glass</option>
           {glasses.map((glassesFilter) => (
-            <option
-              value={glassesFilter.strGlass}
-              key={glassesFilter.strGlass}
-              className=""
-            >
+            <option value={glassesFilter.strGlass} key={glassesFilter.strGlass}>
               {glassesFilter.strGlass}
             </option>
           ))}
