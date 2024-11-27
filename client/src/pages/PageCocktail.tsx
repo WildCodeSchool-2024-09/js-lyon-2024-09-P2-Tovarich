@@ -106,6 +106,7 @@ function PageCocktail() {
         });
     }
   }, [ingredient]);
+
   const [category, setCategory] = useState("");
   useEffect(() => {
     if (category !== "") {
