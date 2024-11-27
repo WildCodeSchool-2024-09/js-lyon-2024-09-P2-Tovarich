@@ -40,6 +40,7 @@ function Input({ setCocktail, setCocktailCounter }: setCocktailProps) {
     <>
       <label>
         <input
+          className="input"
           name="myInput"
           placeholder="Choose a name"
           type="text"
