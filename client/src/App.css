@@ -3,7 +3,7 @@
   font-family: "Harlow Solid";
   src: url("/src/assets/font/Harlow/HarlowSolid.eot");
   src: url("/src/assets/font/Harlow/HarlowSolid.eot?#iefix")
-      format("embedded-opentype"),
+    format("embedded-opentype"),
     url("/src/assets/font/Harlow/HarlowSolid.woff2") format("woff2"),
     url("/src/assets/font/Harlow/HarlowSolid.woff") format("woff"),
     url("/src/assets/font/Harlow/HarlowSolid.otf") format("opentype");
@@ -13,7 +13,7 @@
   font-family: "Nexa";
   src: url("/src/assets/font/Nexa/Nexa-Light-Italic.eot");
   src: url("/src/assets/font/Nexa//Nexa-Light-Italic.eot?#iefix")
-      format("embedded-opentype"),
+    format("embedded-opentype"),
     url("/src/assets/font/Nexa//Nexa-Light-Italic.woff2") format("woff2"),
     url("/src/assets/font/Nexa//Nexa-Light-Italic.woff") format("woff");
   font-display: swap;

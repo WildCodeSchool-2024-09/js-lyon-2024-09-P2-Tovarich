@@ -1,20 +1,20 @@
 import { useEffect, useState } from "react";
-import "../components/RecipeAppearance.css";
-import AlphabetList from "../components/AlphabetList";
-import Cocktail from "../components/Cocktail";
-import CocktailButton from "../components/CocktailButton";
-import FilterGlasses from "../components/FilterGlasses";
-import FilterIngredients from "../components/FilterIngredients";
-import Input from "../components/Input";
-import PopularCocktail from "../components/PopularCocktail";
+import "../components/Filter/Filter.css";
+import "../components/RecipeAppearance/RecipeAppearance.css";
+import AlphabetList from "../components/AlphabetList/AlphabetList";
+import Cocktail from "../components/Cocktail/Cocktail";
+import PopularCocktail from "../components/Cocktail/PopularCocktail";
+import CocktailButton from "../components/Filter/CocktailButton/CocktailButton";
+import FilterCategories from "../components/Filter/FilterCategory/FilterCategory";
+import FilterGlasses from "../components/Filter/FilterGlasses/FilterGlasses";
+import FilterIngredients from "../components/Filter/FilterIngredients/FilterIngredients";
+import Input from "../components/Filter/Input/Input";
 
 interface cocktailProps {
   idDrink: string;
   strDrink: string;
   strDrinkThumb: string;
 }
-
-import FilterCategories from "../components/FilterCategory";
 
 function PageCocktail() {
   const generateKey = (pre: number) => {

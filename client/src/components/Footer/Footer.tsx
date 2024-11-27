@@ -1,6 +1,6 @@
 import "./Footer.css";
 import { useEffect, useState } from "react";
-import FunFacts from "../../src/assets/data/FunFacts.json";
+import FunFacts from "../../../src/assets/data/FunFacts.json";
 
 function Footer() {
   const [number, setNumber] = useState(0);

@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import "./FilterGlasses.css";
 
 interface ingredientsResultProps {
   strIngredient1: string;
