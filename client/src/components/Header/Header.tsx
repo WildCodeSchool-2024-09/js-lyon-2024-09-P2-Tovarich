@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-import IconHome from "../assets/images/IconHome.png";
+import IconHome from "../../assets/images/IconHome.png";
 
 function Header() {
   return (

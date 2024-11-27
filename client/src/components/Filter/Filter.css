@@ -12,7 +12,7 @@ select {
   margin: 5px;
   padding: 15px 32px;
   appearance: none;
-  background-image: url("../assets/images/chevron.png");
+  background-image: url("../../assets/images/chevron.png");
   background-repeat: no-repeat;
   background-position-x: 210px;
   background-position-y: center;
@@ -24,21 +24,21 @@ select:hover {
   border: none;
   border: 2px solid var(--textColor);
   padding: 15px 30px;
-  background-image: url("../assets/images/chevron.png");
+  background-image: url("../../assets/images/chevron.png");
   background-position-x: 208px;
 }
 select:focus {
   color: var(--titleColor);
   border: 2px solid var(--titleColor);
   padding: 15px 30px;
-  background-image: url("../assets/images/chevron_pink.png");
+  background-image: url("../../assets/images/chevron_pink.png");
   background-position-x: 208px;
 }
 select:focus:hover {
   color: var(--titleColor);
   border: 2px solid var(--titleColor);
   padding: 15px 30px;
-  background-image: url("../assets/images/chevron_pink.png");
+  background-image: url("../../assets/images/chevron_pink.png");
   background-position-x: 208px;
 }
 label {

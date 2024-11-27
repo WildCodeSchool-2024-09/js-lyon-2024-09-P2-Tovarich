@@ -1,7 +1,7 @@
 import "./Recipe.css";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import RecipeAppearance from "../components/RecipeAppearance";
+import RecipeAppearance from "../components/RecipeAppearance/RecipeAppearance";
 
 function Recipe() {
   const [cocktailRecipe, setRecipe] = useState([]);
