@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import "./FilterCategory.css";
 
 interface categoriesProps {
   strCategory: string;
@@ -22,21 +21,13 @@ function FilterCategories({ setCategory }: categoryProps) {
       .then((data) => setCategories(data.drinks));
   }, []);
 
-  const categorySpace = (category: string) => {
-    const array = category.split(" ");
-    const result = array.join("_");
-    return result;
-  };
-
   return (
     <>
       <form>
         {categories.map((categoriesFilter) => (
           <label
             htmlFor=""
-            onChange={() =>
-              setCategory(categorySpace(categoriesFilter.strCategory))
-            }
+            onChange={() => setCategory(categoriesFilter.strCategory)}
             key={categoriesFilter.strCategory}
           >
             <input
@@ -44,9 +35,8 @@ function FilterCategories({ setCategory }: categoryProps) {
               checked={check}
               onChange={handleChange}
               type="checkbox"
-              key={categoriesFilter.strCategory}
-              name={categoriesFilter.strCategory}
             />
+
             {categoriesFilter.strCategory}
           </label>
         ))}

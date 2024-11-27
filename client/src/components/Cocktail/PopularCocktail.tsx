@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
-import type { CocktailProsTypes } from "../types/CocktailProsTypes";
+import type { CocktailProsTypes } from "../../types/CocktailProsTypes";
 
-import NeonShaker from "../assets/images/neon-shaker.png";
-import NeonVerre from "../assets/images/neon-verre.png";
+import NeonShaker from "../../assets/images/neon-shaker.png";
+import NeonVerre from "../../assets/images/neon-verre.png";
 
 interface cocktailProps {
   recipeData: CocktailProsTypes[];

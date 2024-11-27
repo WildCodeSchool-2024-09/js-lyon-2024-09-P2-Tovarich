@@ -135,6 +135,7 @@ button {
   height: clamp(100px, 40vh, 500px);
   width: fit-content;
   border-radius: 8px;
+  align-self: center;
 }
 .refreshCocktail button {
   font-family: "Roboto", sans-serif;
@@ -224,15 +225,7 @@ button {
   .infoCocktail h2 {
     font-size: 3vh;
   }
-  .neon {
-    display: unset;
-    display: grid;
-    justify-content: center;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 10px;
-    margin-top: 15px;
-    margin-bottom: 15px;
-  }
+
   .filterElement {
     display: flex;
     flex-direction: row;
@@ -246,5 +239,16 @@ button {
     justify-content: space-between;
     padding-top: 20px;
     margin: 0;
+  }
+}
+@media screen and (min-width: 1120px) {
+  .neon {
+    display: unset;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+    margin-top: 15px;
+    margin-bottom: 15px;
   }
 }
