@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import "../components/RecipeAppearance.css";
-import AlphabetList from "../components/AlphabetList";
-import Cocktail from "../components/Cocktail";
+import AlphabetList from "../components/AlphabetList/AlphabetList";
+import Cocktail from "../components/Cocktail/Cocktail";
 import CocktailButton from "../components/CocktailButton";
 import FilterGlasses from "../components/FilterGlasses";
 import FilterIngredients from "../components/FilterIngredients";
