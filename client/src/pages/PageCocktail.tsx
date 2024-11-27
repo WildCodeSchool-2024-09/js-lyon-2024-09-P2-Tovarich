@@ -3,12 +3,12 @@ import "../components/Filter/Filter.css";
 import "../components/RecipeAppearance/RecipeAppearance.css";
 import AlphabetList from "../components/AlphabetList/AlphabetList";
 import Cocktail from "../components/Cocktail/Cocktail";
+import PopularCocktail from "../components/Cocktail/PopularCocktail";
 import CocktailButton from "../components/Filter/CocktailButton/CocktailButton";
 import FilterCategories from "../components/Filter/FilterCategory/FilterCategory";
 import FilterGlasses from "../components/Filter/FilterGlasses/FilterGlasses";
 import FilterIngredients from "../components/Filter/FilterIngredients/FilterIngredients";
 import Input from "../components/Filter/Input/Input";
-import PopularCocktail from "../components/Cocktail/PopularCocktail";
 
 interface cocktailProps {
   idDrink: string;
