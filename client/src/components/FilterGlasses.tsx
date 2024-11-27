@@ -6,11 +6,11 @@ interface glassesProps {
 }
 
 interface glassProps {
-  glass: string;
+  Glass: string;
   setGlass: (glass: string) => void;
 }
 
-function FilterGlasses({ setGlass, glass }: glassProps) {
+function FilterGlasses({ setGlass, Glass }: glassProps) {
   const [glasses, setGlasses] = useState<glassesProps[]>([]);
   useEffect(() => {
     fetch("https://www.thecocktaildb.com/api/json/v1/1/list.php?g=list")
@@ -30,7 +30,7 @@ function FilterGlasses({ setGlass, glass }: glassProps) {
         <select
           onChange={(e) => setGlass(glassSpace(e.target.value))}
           defaultValue="Select a glass"
-          value={glass}
+          value={Glass || ""}
         >
           <option value="">Select a glass</option>
           {glasses.map((glassesFilter) => (

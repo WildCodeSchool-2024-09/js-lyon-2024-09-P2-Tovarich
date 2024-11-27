@@ -131,7 +131,7 @@ function PageCocktail() {
             noAlcool={noAlcool}
             setNoAlcool={setNoAlcool}
           />
-          <FilterGlasses glass={glass} setGlass={setGlass} />
+          <FilterGlasses Glass={glass} setGlass={setGlass} />
           <FilterIngredients
             Ingredient={ingredient}
             setIngredient={setIngredient}
