@@ -17,17 +17,11 @@ function FilterCategories({ setCategory, category }: categoryProps) {
       .then((data) => setCategories(data.drinks));
   }, []);
 
-  const categorySpace = (category: string) => {
-    const array = category.split(" ");
-    const result = array.join("_");
-    return result;
-  };
-
   return (
     <>
       <label>
         <select
-          onChange={(e) => setCategory(categorySpace(e.target.value))}
+          onChange={(e) => setCategory(e.target.value)}
           defaultValue="Select a category"
           value={category}
         >
