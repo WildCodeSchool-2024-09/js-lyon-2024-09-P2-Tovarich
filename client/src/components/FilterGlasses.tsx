@@ -32,13 +32,7 @@ function FilterGlasses({ setGlass, glass }: glassProps) {
           defaultValue="Select a glass"
           value={glass}
         >
-          <option value="">
-            Select a glass
-            <img
-              src="client\src\assets\images\dropdownarrow-removebg-preview.png"
-              alt="dropdown arrow"
-            />
-          </option>
+          <option value="">Select a glass</option>
           {glasses.map((glassesFilter) => (
             <option
               value={glassesFilter.strGlass}
