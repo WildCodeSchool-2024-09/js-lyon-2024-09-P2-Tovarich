@@ -164,4 +164,4 @@ function PageCocktail() {
   );
 }
 
-export default PageCocktail; //vrai
+export default PageCocktail;
