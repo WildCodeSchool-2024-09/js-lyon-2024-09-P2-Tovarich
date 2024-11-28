@@ -34,4 +34,4 @@ function CocktailButton({
   );
 }
 
-export default CocktailButton; //vrai
+export default CocktailButton;
