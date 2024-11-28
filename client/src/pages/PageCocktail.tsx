@@ -1,16 +1,26 @@
 import { useEffect, useState } from "react";
-import "../components/RecipeAppearance.css";
-import AlphabetList from "../components/AlphabetList";
-import Cocktail from "../components/Cocktail";
-import CocktailButton from "../components/CocktailButton";
-import FilterGlasses from "../components/FilterGlasses";
-import PopularCocktail from "../components/PopularCocktail";
+import "../components/Filter/Filter.css";
+import "../components/RecipeAppearance/RecipeAppearance.css";
+import AlphabetList from "../components/AlphabetList/AlphabetList";
+import Cocktail from "../components/Cocktail/Cocktail";
+import PopularCocktail from "../components/Cocktail/PopularCocktail";
+import CocktailButton from "../components/Filter/CocktailButton/CocktailButton";
+import FilterCategories from "../components/Filter/FilterCategory/FilterCategory";
+import FilterGlasses from "../components/Filter/FilterGlasses/FilterGlasses";
+import FilterIngredients from "../components/Filter/FilterIngredients/FilterIngredients";
+import Input from "../components/Filter/Input/Input";
+
+interface cocktailProps {
+  idDrink: string;
+  strDrink: string;
+  strDrinkThumb: string;
+}
 
 function PageCocktail() {
   const generateKey = (pre: number) => {
     return `${pre}_${new Date().getTime()}`;
   };
-  const [cocktailInformation, setCocktail] = useState([]);
+  const [cocktailInformation, setCocktail] = useState<cocktailProps[]>([]);
   const [cocktailCounter, setCocktailCounter] = useState(0);
 
   useEffect(() => {
@@ -83,6 +93,34 @@ function PageCocktail() {
     }
   }, [glass]);
 
+  const [ingredient, setIngredient] = useState("");
+  useEffect(() => {
+    if (ingredient !== "") {
+      fetch(
+        `https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${ingredient}`,
+      )
+        .then((res) => res.json())
+        .then((data) => {
+          setCocktail(data.drinks);
+          setCocktailCounter(data.drinks.length);
+        });
+    }
+  }, [ingredient]);
+
+  const [category, setCategory] = useState("");
+  useEffect(() => {
+    if (category !== "") {
+      fetch(
+        `https://www.thecocktaildb.com/api/json/v1/1/filter.php?c=${category}`,
+      )
+        .then((res) => res.json())
+        .then((data) => {
+          setCocktail(data.drinks);
+          setCocktailCounter(data.drinks.length);
+        });
+    }
+  }, [category]);
+
   return (
     <>
       <PopularCocktail recipeData={randomCocktail} />
@@ -95,15 +133,26 @@ function PageCocktail() {
             setNoAlcool={setNoAlcool}
           />
           <FilterGlasses glass={glass} setGlass={setGlass} />
+          <FilterIngredients
+            Ingredient={ingredient}
+            setIngredient={setIngredient}
+          />
+          <FilterCategories category={category} setCategory={setCategory} />
+          <Input
+            setCocktail={setCocktail}
+            setCocktailCounter={setCocktailCounter}
+            cocktail={cocktailInformation}
+            cocktailCounter={cocktailCounter}
+          />
         </div>
         <AlphabetList letter={letter} setLetter={setLetter} />
       </nav>
       <div className="cocktailCount">
         <h1>Cocktails</h1>
-        <p> {cocktailCounter} Résultat(s)</p>
+        <p> {cocktailCounter} Results(s)</p>
       </div>
       <main className="totalCocktail">
-        {cocktailInformation === null ? (
+        {cocktailInformation === null || cocktailInformation.length === 0 ? (
           <h2>Pas de cocktail</h2>
         ) : (
           cocktailInformation.map((cocktailDetail, index) => (

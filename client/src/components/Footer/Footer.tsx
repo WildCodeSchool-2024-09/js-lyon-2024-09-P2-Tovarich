@@ -1,6 +1,6 @@
 import "./Footer.css";
 import { useEffect, useState } from "react";
-import FunFacts from "../../src/assets/data/FunFacts.json";
+import FunFacts from "../../../src/assets/data/FunFacts.json";
 
 function Footer() {
   const [number, setNumber] = useState(0);
@@ -18,9 +18,9 @@ function Footer() {
       <div className="secondSection">
         <h1>Smooth Operator</h1>
         <p>
-          Projet 02 basé sur l'API https://www.thecocktaildb.com/api.php, vous
-          est proposé par le groupe Tovaritch constitué d'Aurore SEGOVIA,
-          Théophile SIMOES DAS NEVES, Sébastien FOURNIER et Daniel STACOFFE
+          Project 02 using the API https://www.thecocktaildb.com/api.php, is
+          created by Aurore SEGOVIA, Théophile SIMOES DAS NEVES, Sébastien
+          FOURNIER and Daniel STACOFFE
         </p>
       </div>
     </footer>

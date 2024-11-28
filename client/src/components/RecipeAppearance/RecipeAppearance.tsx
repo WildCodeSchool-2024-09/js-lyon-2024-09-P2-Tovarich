@@ -1,4 +1,4 @@
-import type { CocktailProsTypes } from "../types/CocktailProsTypes";
+import type { CocktailProsTypes } from "../../types/CocktailProsTypes";
 
 interface cocktailProps {
   recipeData: CocktailProsTypes[];

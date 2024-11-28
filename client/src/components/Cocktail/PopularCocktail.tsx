@@ -1,9 +1,8 @@
 import { Link } from "react-router-dom";
-import type { CocktailProsTypes } from "../types/CocktailProsTypes";
 
-import NeonShaker from "../assets/images/neon-shaker.png";
-import NeonVerre from "../assets/images/neon-verre.png";
-
+import NeonGlass from "../../assets/images/neon-glass.png";
+import NeonShaker from "../../assets/images/neon-shaker.png";
+import type { CocktailProsTypes } from "../../types/CocktailProsTypes";
 interface cocktailProps {
   recipeData: CocktailProsTypes[];
 }
@@ -14,7 +13,7 @@ function PopularCocktail({ recipeData }: cocktailProps) {
       <h2 className="popularTitle">Popular refreshing cocktail</h2>
       {recipeData.map((recipePopular) => (
         <article className="refreshCocktail" key={recipePopular.idDrink}>
-          <img className="neon" src={NeonVerre} alt="neon verre" />
+          <img className="neon" src={NeonGlass} alt="neon glass" />
           <section className="refreshSection">
             <img
               src={recipePopular.strDrinkThumb}
