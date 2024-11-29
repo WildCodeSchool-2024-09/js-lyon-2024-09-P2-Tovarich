@@ -1,0 +1,19 @@
+input {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+  color: var(--textColor);
+  background-color: var(--colorBackground);
+  padding: 10px;
+  width: 235px;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+  appearance: none;
+  cursor: pointer;
+  padding: 15px 30px;
+  border: 2px solid #908dff;
+}
+label {
+  position: relative;
+}

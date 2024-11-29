@@ -1,0 +1,78 @@
+.infoRecipe {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.infoRecipe img {
+  height: clamp(100px, 40vh, 500px);
+  border-radius: 8px;
+}
+.infoRecipe button {
+  display: flex;
+  justify-self: center;
+  font-family: "Roboto", sans-serif;
+  font-size: 24px;
+  border: none;
+  background-color: rgba(0, 0, 0, 0);
+}
+.infoRecipe a {
+  color: var(--textColor);
+  text-decoration: none;
+}
+.infoRecipe h2 {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+.image {
+  display: flex;
+  justify-content: center;
+}
+.image h2 {
+  justify-self: center;
+  align-self: center;
+}
+li {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+}
+.instructions {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.cocktailCount {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cocktailCount h1 {
+  font-size: 42px;
+}
+.cocktailCount p {
+  font-size: 24px;
+  font-weight: 300;
+  color: var(--secondaryTitleColor);
+  margin-left: 10px;
+  margin-bottom: 9px;
+}
+
+@media screen and (min-width: 768px) {
+  .image h2 {
+    justify-self: center;
+    align-self: center;
+    margin: 0 10px;
+  }
+  .infoRecipe {
+    grid-template-columns: 2fr 3fr;
+    width: 100%;
+  }
+  .infoRecipe h2 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    display: flex;
+    justify-content: left;
+  }
+}

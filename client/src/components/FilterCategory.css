@@ -1,0 +1,18 @@
+.checkbox {
+  border: solid 1px rgb(243, 238, 241);
+  background-color: rgb(233, 64, 176);
+  width: 22.3px;
+  height: 22.3px;
+  padding: 0;
+  color: var(--titleColor);
+}
+label {
+  color: rgb(241, 81, 171);
+}
+form {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+}

@@ -1,0 +1,35 @@
+.alcoolButton {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+  color: var(--textColor);
+  background-color: var(--DarkBg);
+  height: auto;
+  width: 200px;
+  margin: 5px;
+  padding: 17px 30px;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+.alcoolButton:hover {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+  color: var(--textColor);
+  background-color: var(--DarkBg);
+  width: 200px;
+  padding: 15px 30px;
+  border: 2px solid var(--textColor);
+  border-radius: 8px;
+}
+.alcoolButton:focus {
+  color: var(--titleColor);
+  padding: 15px 30px;
+  border: 2px solid var(--titleColor);
+}
+.alcoolButton:focus:hover {
+  color: var(--titleColor);
+  padding: 15px 30px;
+  border: 2px solid var(--titleColor);
+}
